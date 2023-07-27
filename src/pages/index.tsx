@@ -37,16 +37,16 @@ export default function Home() {
             }
           </div>
         </div>
-        <div className=' md:col-span-9 md:flex items-center overflow-scroll'>
-          <div className="border flex items-center rounded-md px-4 h-full w-full bg-slate-800 border-slate-900 overflow-scroll">
+        <div className=' md:col-span-9 md:flex items-center w-full overflow-x-auto no-scrollbar'>
+          <div className="border flex items-center rounded-md px-4 h-full w-full bg-slate-800 border-slate-900">
             <div className="flex items-center text-gray-400 ">
               <AdjustmentsHorizontalIcon className="w-5 h-5 mt-0.5" />
               <span className="text-sm mr-2 whitespace-nowrap	">
                 مرتب سازی :
               </span>
             </div>
-            <div className="">
-              <ul className="flex items-center overflow-x-scroll">
+            <div className="w-full overflow-x-auto no-scrollbar">
+              <ul className="flex items-center">
                 <li className="px-4 whitespace-nowrap	 w-fit py-2 cursor-pointer text-gray-200 text-sm">جدید ترین</li>
                 <li className="px-4 whitespace-nowrap	 w-fit py-2 cursor-pointer text-gray-200 text-sm">بیشترین بازدید</li>
                 <li className="px-4 whitespace-nowrap	 w-fit py-2 cursor-pointer text-gray-200 text-sm">قدیمی ترین</li>
@@ -57,8 +57,8 @@ export default function Home() {
         </div>
         <div className='rounded-md md:col-span-9 grid grid-cols-12 gap-4'>
           {
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(el =>
-              <div className="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-3 bg-sky-900 rounded-md h-fit p-3 relative mt-8">
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((el , index) =>
+              <div key={index} className="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-3 bg-sky-900 rounded-md h-fit p-3 relative mt-8">
                 <figure className="-mt-8 rounded-md overflow-hidden mb-3">
                   <Image src={imagedf} alt="d" />
                 </figure>
